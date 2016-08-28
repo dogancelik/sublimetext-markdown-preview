@@ -7,6 +7,13 @@
         }
     },
     {
+        "caption": "Markdown Preview: Copy HTML file path to Clipboard",
+        "command": "markdown_preview_select",
+        "args": {
+            "target": "clipboard_path"
+        }
+    },
+    {
         "caption": "Markdown Preview: Export HTML in Sublime Text",
         "command": "markdown_preview_select",
         "args": {
