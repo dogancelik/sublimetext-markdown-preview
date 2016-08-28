@@ -61,6 +61,7 @@ For all Sublime Text 2/3 users we recommend install via [Package Control][3].
  - optionally select some of your markdown for conversion
  - use <kbd>cmd</kbd>+<kbd>shift</kbd>+<kbd>P</kbd> then `Markdown Preview` to show the follow commands (you will be prompted to select which parser you prefer):
 	- Markdown Preview: Preview in Browser
+    - Markdown Preview: Copy HTML file path to Clipboard
 	- Markdown Preview: Export HTML in Sublime Text
 	- Markdown Preview: Copy to Clipboard
 	- Markdown Preview: Open Markdown Cheat sheet
