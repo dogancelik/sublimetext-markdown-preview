@@ -33,6 +33,7 @@
         build - The default build behavior.
         browser - Preview the file in your browser.
         clipboard - Copy the HTML output to the clipboard.
+        clipboard_path - Copy the HTML file path to the clipboard.
         sublime - Export the HTML to a Sublime tab.
         save - Run the normal save command that outputs to the source directory.
             It will also prompt for "save as" if the file does not exit on disk.
