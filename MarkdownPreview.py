@@ -1176,9 +1176,9 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
             # Fallback to Python Markdown
             compiler = MarkdownCompiler()
 
-        html, body = compiler.run(self.view, preview=(target in ['disk', 'browser']))
+        html, body = compiler.run(self.view, preview=(target in ['disk', 'browser', 'clipboard_path']))
 
-        if target in ['disk', 'browser']:
+        if target in ['disk', 'browser', 'clipboard_path']:
             # do not use LiveReload unless autoreload is enabled
             if settings.get('enable_autoreload', True):
                 # check if LiveReload ST2 extension installed and add its script to the resulting HTML
@@ -1193,6 +1193,8 @@ class MarkdownPreviewCommand(sublime_plugin.TextCommand):
             # now opens in browser if needed
             if target == 'browser':
                 self.__class__.open_in_browser(tmp_fullpath, settings.get('browser', 'default'))
+            elif target == 'clipboard_path':
+                sublime.set_clipboard(tmp_fullpath)
         elif target == 'sublime':
             # create a new buffer and paste the output HTML
             embed_css = settings.get('embed_css_for_sublime_output', True)
